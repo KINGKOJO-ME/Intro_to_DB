@@ -1,10 +1,10 @@
-CREATE DATABASE alx_book_store;
+CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 USE alx_book_store;
 
 CREATE TABLE Authors (
     author_id int primary key auto_increment,
-    author_name varchar(215) not null,
+    author_name varchar(215) not null
 );
 
 CREATE TABLE Books (
@@ -16,7 +16,7 @@ CREATE TABLE Books (
     FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
 
-CREATE TABLE Cusstomers (
+CREATE TABLE Customers (
     customer_id int primary key auto_increment,
     customer_name varchar(215) not null,
     email varchar(215) unique not null,
@@ -30,7 +30,7 @@ CREATE TABLE Orders (
     FOREIGN KEY (customer_id) REFERENCES Cusstomers(customer_id)
 );
 
-CREATE TABLE Order_DEtails (
+CREATE TABLE OrderDEtails (
     orderdetailid int primary key auto_increment,
     order_id int,
     book_id int,
