@@ -18,8 +18,8 @@ CREATE TABLE Books (
 
 CREATE TABLE Customers (
     customer_id int PRIMARY KEY auto_increment,
-    customer_name varchar(215) not null,
-    email varchar(215) unique not null,
+    customer_name VARCHAR(215) not null,
+    email VARCHAR(215) unique not null,
     address TEXT
 );
 
