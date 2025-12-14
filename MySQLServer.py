@@ -1,6 +1,3 @@
-# File: MySQLServer.py
-# Repo: Intro_to_DB
-
 import mysql.connector
 
 def create_database():
@@ -19,7 +16,10 @@ def create_database():
             print("Database 'alx_book_store' created successfully!")
 
     except mysql.connector.Error as e:
-        print(f"Error while connecting to MySQL: {e}")
+        print(f"MySQL error: {e}")
+    
+    except Exception as e:
+        print(f"Error: {e}")
 
     finally:
         # Ensure connection is closed
